@@ -11,17 +11,17 @@ public class CSVTaxpersonTest {
 	@Test
 	public void getTotalPrice(){
 		CSVTaxperson csv = new CSVTaxperson();
-		long tot = csv.fullPrice(ItemType.NECESSARY, 34l);
-		assertEquals(34l, tot);
+		long tot = csv.fullPrice(ItemType.NECESSARY, 34L);
+		assertEquals(35L, tot);
 		
 		long total = csv.fullPrice(ItemType.NECESSARY, 106);
-		assertEquals(107l, total);
+		assertEquals(108, total);
 		
 		long total1 = csv.fullPrice(ItemType.LUXUARY, 177l);
 		assertEquals(193, total1);
 		
 		long total2 = csv.fullPrice(ItemType.NECESSARY, 9);
-		assertEquals(9, total2);
+		assertEquals(10, total2);
 		
 		long total3 = csv.fullPrice(ItemType.LUXUARY, 10000000);
 		assertEquals(10900000l, total3);
